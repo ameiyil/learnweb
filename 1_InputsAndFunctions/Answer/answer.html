@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <!--This tells the page to use our "styles.css" file for the look for this page-->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!--This tells this page to use our equations.js file-->
+    <script src="equations.js"></script>
+
+    <title>Inputs and Functions</title>
+</head>
+
+<body>
+    <section>
+        <!--This is a header much like headers in Word documents-->
+        <h1>Calculate Temperature</h1>
+
+        <!--The text fields and their labels are in this block-->
+        <div id="inputs">
+
+            <!--
+            The input element is the text box:
+            id - We give the input element a specific ID so we can get its value later on
+            type - Specifies that it takes text as input
+            value - The default value that it has
+            
+            The label element is the text that is show next to the text box-->
+            <label>Temperature in Fahrenheit:<input id="fahrenheit" type="text" value="0"><span class="error" hidden>*</span></label>
+
+            <!--This is the button that the user will press to start the calculation-->
+            <button id="calcBtn" onclick="calculate()">Calculate</button>
+
+            <!--This is where we will display the results of the calculations-->
+            <textarea id="results">Enter a temperature and press "Calculate"!</textarea>
+        </div>
+    </section>
+</body>
+
+</html>
