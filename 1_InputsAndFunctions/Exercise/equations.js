@@ -3,25 +3,26 @@ function calculate() {
     let output = "Results:\n";
 
     // Get the value from our fahrenheit text field
-    let fahrenheit = document.getElementById('fahrenheit').value;
-    fahrenheit = parseFloat(fahrenheit);
+    // TODO: Step #6
+    // TODO: Step #7
 
     // Calculate temperature in Celsius
-    const celsius = fahrenheitToCelsius(fahrenheit);
+    // TODO: Step #8
 
     // Update our output text
-    output = output + `${fahrenheit.toFixed(2)}&deg;F is ${celsius.toFixed(2)}&deg;C`;
+    // TODO: Step #9 and Bonus
 
     // Calculate temperature in Kelvin
-    const kelvin = celsiusToKelvin(celsius);
+    // TODO: Step #12
 
     // Put the Kelvin temperature on the next line
-    output = output + "\n";
-    output = output + `${fahrenheit.toFixed(2)}&deg;F is ${kelvin.toFixed(2)}&deg;K`;
+    // TODO: Step #12, #13, and Bonus
 
-    // Put it in the text area
-    const textArea = document.getElementById('results');
-    textArea.innerHTML = output;
+    // Get the text area so that we can set it's value
+    // TODO: Step #10
+
+    // Set the text in the text area to the string in our variable "output"
+    // TODO: Step #10
 }
 
 /**
@@ -32,7 +33,8 @@ function calculate() {
  * @returns {Number} the temperature in Celsius
  */
 function fahrenheitToCelsius(fahrenheit) {
-    return (fahrenheit - 32) * 5 / 9;
+    // TODO: Step #11
+    return 0;
 }
 
 /**
@@ -43,5 +45,6 @@ function fahrenheitToCelsius(fahrenheit) {
  * @returns {Number} the temperature in Kelvin
  */
 function celsiusToKelvin(celsius) {
-    return celsius + 273;
+    // TODO: Question #14
+    return 0;
 }

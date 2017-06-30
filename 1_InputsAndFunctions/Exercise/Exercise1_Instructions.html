@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Exercise 1 Instructions</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 16px;
+        }
+        
+        p {
+            padding-left: 20px;
+        }
+        
+        li {
+            padding-bottom: 5px;
+        }
+        
+        code {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Exercise 1 Instructions</h1>
+    <p>
+        In this exercise, you'll but completing a web page that will convert a temperature from Fahrenheit to both Celsius and Kelvin.<br> Then the results will be displayed in the text area on the page.
+    </p>
+    <p>
+        Go to the "Answers" folder and double click on <strong>answer.html</strong> to open it in Chrome to see what the result will look like.
+    </p>
+    <p>
+        When you're ready, follow along with the steps.
+    </p>
+    <p>
+        Each step on this page that relates to changing some code will have a corresponding "TODO: Step #_" in the <strong>exercise.html, equations.js, or styles.css</strong> pages.<br> Look for that text and fill in your answer.
+    </p>
+    <h2>Getting Started:</h2>
+    <ul>
+        <li>
+            <strong>Download Visual Studio Code</strong>
+            <br>Go to <a href="https://code.visualstudio.com/download">https://code.visualstudio.com/download</a> and click on the "Windows" download button, then install the program
+        </li>
+        <li>
+            <strong>Open Visual Studio Code</strong>
+            <br>Open the Visual Studio Code program from the shortcut it created on your desktop
+        </li>
+        <li>
+            <strong>Open the exercise</strong>
+            <br>Go to File > Open Folder ... > Select the "Exercise" folder that these instructions are in
+        </li>
+        <li>
+            <strong>Open the exercise.html in Visual Studio Code</strong>
+            <br>On the left, click on the paper icons and double click on "exercise.html" in the left menu that gets opened
+        </li>
+        <li>
+            <strong>Open up the exercise page in Chrome</strong>
+            <br>Now we're going to open it in Chrome to see that the web page actually looks like. Double click on <strong>exercise.html</strong> to open it in Chrome. Since it has the <strong>.html</strong> extension, the computer knows that it can be
+            opened in a browser.
+        </li>
+        <li>
+            <strong>Give a name to the web page</strong>
+            <br>Right now this page doesn't have a name, look for the <code>&lt;title&gt;</code> tags and <strong>put the title you want between them</strong>.
+        </li>
+    </ul>
+    <h2>Creating the structure of the page:</h2>
+    <ol>
+        <li>
+            <strong>Give a name to the web page</strong>
+            <ul>
+                <li>Right now this page doesn't have a name, look for "TODO: Step #1" and the <code>&lt;title&gt;</code> tags and <strong>put the title you want between them</strong>.</li>
+                <li>Save your changes and then refresh the exercise page in Chrome and notice that the name in the tab has changed</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Add a label for the text field</strong>
+            <ul>
+                <li>Right now the page only has a button and a text area for the results. But there isn't anywhere for anyone to type in the temperature</li>
+                <li>Look for "Step #2" in exercise.html</li>
+                <li>The <code>label</code> element is the text that is shown next to the text box</li>
+                <li>Type some text between the <code>&lt;label&gt;</code> tags</li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Add a text field</strong>
+            <ul>
+                <li>Now that we have a label for the text field we need to add the box for people to type stuff in</li>
+                <li>Right after where you typed the name for the label and also between the <code>&lt;label&gt;</code> tags, type <code>&lt;input id="???" type="text" value="???"&gt;&lt;/input&gt;</code></li>
+                <li>For the <code>id</code> attribute, name it something meaningful like "fahrenheit" - we will use this is to access it's value later on</li>
+                <li>For the <code>value</code> attribute, put what you think the default value should be, for example 0 or 32</li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Adding the look of the page:</h2>
+    <ol start="4">
+        <li>
+            <strong>Add some styling</strong>
+            <ul>
+                <li>Without some styling, the page looks really ugly right now</li>
+                <li>We already have styles defined in <strong>styles.css</strong>, we just need to tell the exercises page to use them</li>
+                <li>To do this, add the line <code>&lt;link rel="stylesheet" type="text/css" href="styles.css"&gt;</code> anywhere between the <code>head</code> tags</li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+                <li>It should look a bit cleaner now</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Adding the behaviour of the page:</h2>
+    <ol start="5">
+        <li>
+            <strong>Add behaviour when you click the calculate button</strong>
+            <ul>
+                <li>Right now, clicking on the button doesn't do anything, even though the <code>onclick</code> attribute has a value "calculate()"</li>
+                <li>This is because the page currently doesn't know where to look for that JavaScript function</li>
+                <li>We will tell it where to find this code by adding the line <code>&lt;script src="equations.js"&gt;&lt;/script&gt;</code> in between the <code>head</code> tags</li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+                <li>Now click on the button again, you'll see that stuff happens but not what we want, we'll fix that in the next step</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Tell the code to get the value we put in the text field that we added in Step 3</strong>
+            <ul>
+                <li>Open the <strong>equations.js</strong> file</li>
+                <li>Create a variable called "fahrenheit" using the "let" keyword, this creates a variable that can be assigned different values later on: <code>let fahrenheit = document.getElementById('???').value;</code></li>
+                <li>Where I've put ???, type in the id that you chose in step 3</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Convert the value of the "fahrenheit" variable from a "String" to a "Number"</strong>
+            <ul>
+                <li>The value that is currently stored in our <code>fahrenheit</code> variable is currently a String</li>
+                <li>In order for us to perform mathematical calculations on it, we must first convert it into a Number</li>
+                <li>To do this, re-assign the value of <code>fahrenheit</code> to its value converted into a Number using this code <code>fahrenheit = parseFloat(fahrenheit)</code></li>
+                <li>This might seem strange that we are assigning a variable but also performing calculations on it at the same time</li>
+                <li>What the computer is doing is first calculating what's on the right of the "=" sign, and then putting that calculated value into the variable on the left of the "=" sign</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Create a variable to store the temperature in Celsius</strong>
+            <ul>
+                <li>This time we will create a variable called "celsius" using the "const" keyword, this creates a variable whose value can never change later on</li>
+                <li>The benefit of this is that it allows us to know that once it is assigned a value, it will never by anything other than that</li>
+                <li>Type in the following code: <code>const celsius = fahrenheitToCelsius(fahrenheit);</code></li>
+            </ul>
+        </li>
+        <li>
+            <strong>Update our output variable with the Celsius value we just calculated</strong>
+            <ul>
+                <li><code>output = output + fahrenheit + "&amp;deg;F is " + celsius + "&amp;deg;C";</code></li>
+                <li>What we are doing above is building a string by adding up all the parts</li>
+                <li>By doing <code>output = output + ...</code>, this tells the computer to <strong>add</strong> our new strings on top of what we already have in the <code>output</code> variable</li>
+                <li>When variables <code>fahrenheit</code> and <code>celsius</code> are added to other strings, the computer converts its values to a string first</li>
+                <li>This process allows us to give output the value of a string, but values stored those variables are untouched and remain as numbers</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Get the text area and assign its value to our output variable's value</strong>
+            <ul>
+                <li>Get the text area element by calling the <strong>document.getElementById</strong> function with its id "results"</li>
+                <li>Assign it to a new variable called "textArea": <code>const textArea = document.getElementById('results');</code></li>
+                <li>Now using that <code>textArea</code> variable, we can set its text to our output: <code>textArea.innerHTML = output;</code></li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+                <li>Click on the button and notice that now we are actually seeing a value in the text area</li>
+                <li>Try it out a few times with different fahrenheit values, what do you notice?</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Fix the fahrenheitToCelsius function</strong>
+            <ul>
+                <li>You'll have noticed that not matter what fahrenheit value you've put, the calculated celsius value is always 0</li>
+                <li>Take a look at what is inside the fahrenheitToCelsius function, it's always returning 0</li>
+                <li>Change what is returned with the actual formula</li>
+                <li>Save your changes and refresh the page in Chrome to test if your function is correct</li>
+                <li>Keep updating your code until it is</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Output the Fahrenheit value converted to Kelvin as well</strong>
+            <ul>
+                <li>Repeat step 8 to create a variable called "kelvin"</li>
+                <li>Repeat step 9 to update our output with the new kelvin value we just added</li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+                <li>Click on the button, what do you see?</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Put the Kelvin temperature on the next line</strong>
+            <ul>
+                <li>You may have noticed that the Celsius and Kelvin lines are squished together</li>
+                <li>To tell the computer to put the Kelvin value on the next line, we add a special string <code>"\n"</code> to where we want the line break to be</li>
+                <li>You'll want something looking like this: <code>output = output + "\n" + ...</code></li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+                <li>Try it out a few times with different fahrenheit values, what do you notice?</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Fix the celsiusToKelvin</strong>
+            <ul>
+                <li>Like before you'll notice that the Kelvin value is also always 0</li>
+                <li>Fix the celsiusToKelvin function to return the correct values</li>
+                <li>Save your changes and refresh the page in Chrome to test if your function is correct</li>
+                <li>Keep updating your code until it is and then you're done!</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Bonus: Change the number of significant digits</strong>
+            <ul>
+                <li>You might have noticed that the calculated values sometimes have a bunch of significant digits</li>
+                <li>We're only interested in up to 2 decimal points</li>
+                <li>We can change this by modifying the temperature values as they are being stored in the output variable</li>
+                <li>To do this we add a function call <code>.toFixed(2)</code> to each of the temperature values</li>
+                <li>Save your changes and then refresh the exercise page in Chrome</li>
+                <li>You should now notice that something like 17.11111111 becomes 17.11</li>
+            </ul>
+        </li>
+    </ol>
+    <h2>Congrats! You are now done!</h2>
+</body>
+
+</html>
